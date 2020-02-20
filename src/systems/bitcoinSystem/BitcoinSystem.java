@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class BitcoinSystem {
 
     private static Scanner in = new Scanner(System.in);
-    private static DecimalFormat formatter = new DecimalFormat("#.##");
+    private static DecimalFormat formatter = new DecimalFormat("#,##");
 
     private static double bitcoinPrice;
     private static int bitcoinValueCounter;
@@ -92,6 +92,7 @@ public class BitcoinSystem {
         if (investor.getMoneyWallet() >= money) {
             investor.withdrawMoney(money);
             investor.depositBitcoin(money / bitcoinPrice);
+            investorBalance();
         } else {
             System.out.println("You have no money to this...");
         }
@@ -124,6 +125,7 @@ public class BitcoinSystem {
         if (investor.getBitcoinWallet() >= bitcoin) {
             investor.withdrawBitcoin(bitcoin);
             investor.depositMoney(bitcoin * bitcoinPrice);
+            investorBalance();
         } else {
             System.out.println("You have no bitcoin to this...");
         }
@@ -135,10 +137,15 @@ public class BitcoinSystem {
             investor.withdrawBitcoin();
         }
 
-        System.out.println(investor.getName());
-        System.out.println("Final balance: $ " + formatter.format(investor.getMoneyWallet()));
+        investorBalance();
 
         investor = null;
+    }
+
+    private static void investorBalance() {
+        System.out.println(investor.getName());
+        System.out.println("Money balance: $ " + formatter.format(investor.getMoneyWallet()));
+        System.out.println("Bitcoin balance: $ " + formatter.format(investor.getBitcoinWallet()));
     }
 
     private static boolean isBitcoinValued() {
