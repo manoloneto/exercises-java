@@ -1,4 +1,4 @@
-package array.schoolSystem.models;
+package systems.schoolSystem.models;
 
 import java.util.ArrayList;
 import java.util.Scanner;

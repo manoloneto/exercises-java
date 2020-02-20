@@ -1,4 +1,4 @@
-package array.schoolSystem.models;
+package systems.schoolSystem.models;
 
 public class Student {
 

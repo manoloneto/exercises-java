@@ -1,7 +1,7 @@
-package array.schoolSystem;
+package systems.schoolSystem;
 
-import array.schoolSystem.models.SchoolClass;
-import array.schoolSystem.models.Student;
+import systems.schoolSystem.models.SchoolClass;
+import systems.schoolSystem.models.Student;
 
 import java.util.Scanner;
 
