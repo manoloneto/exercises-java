@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class BitcoinSystem {
 
     private static Scanner in = new Scanner(System.in);
-    private static DecimalFormat formatter = new DecimalFormat("#,##");
+    private static DecimalFormat formatter = new DecimalFormat("#.##");
 
     private static double bitcoinPrice;
     private static int bitcoinValueCounter;
